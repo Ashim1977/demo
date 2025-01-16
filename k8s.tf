@@ -50,11 +50,11 @@ resource "kubernetes_ingress_v1" "demoapp_ingress" {
           path    = "/"
           backend {
             service {
-				name = kubernetes_service.demoapp_service.metadata.0.name
-				port {
-					number = 8090
-				}
-			}
+		name = kubernetes_service.demoapp_service.metadata.0.name
+		port {
+			number = 8090
+		}
+	    }
           }
         }
       }
